@@ -4,6 +4,10 @@ A high-fidelity, accessible, and fully testable Todo Item Card built for the **H
 
 **[View Live Demo](https://hng-task-0-odielijah.netlify.app/)**
 
+## 📸 Project Preview
+<img width="1680" height="1050" alt="Screenshot 2026-04-10 at 10 26 53 pm" src="https://github.com/user-attachments/assets/1d5dfd73-708b-4caa-b0ab-31f369156aa7" />
+
+
 ## ✨ Key Features
 
 ### Automated Testability
@@ -40,3 +44,13 @@ A high-fidelity, accessible, and fully testable Todo Item Card built for the **H
 ├── style.css    # Responsive styling & Focus states
 ├── script.js    # Countdown & Interaction logic
 └── README.md    # Documentation
+```
+
+## 🔧 Installation & Local Setup
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/odielijah/hng-task-0.git
+   ```
+2. **Open the project:**
+Simply double-click index.html or use the Live Server extension in VS Code.
