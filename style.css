@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --primary-red: #c51f2d;
+  --bg-light: #f9fafb;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+body {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Miranda Sans", sans-serif;
+}
+
+.todo-card {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-content {
+  flex: 1;
+  padding: 32px;
+}
+
+/* Header Styles */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+.badge-pending {
+  background: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: #4b5563;
+}
+.badge-done {
+  background: #75f8bf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: #225839;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.priority-badge {
+  background: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 15px;
+}
+
+.time-hint {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Description */
+.description {
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 24px 0;
+}
+
+/* Middle Row */
+.middle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.date-box {
+  color: var(--text-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.tag.work {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+.tag.urgent {
+  background: #fee2e2;
+  color: var(--primary-red);
+}
+
+/* Checkbox Area */
+.complete-area {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.complete-area:hover {
+  background: #e5e7eb;
+}
+
+.complete-area input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.complete-area label {
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  flex: 1;
+}
+
+.complete-area input[type="checkbox"]:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Footer Buttons */
+.card-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.card-footer button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition:
+    transform 0.1s,
+    opacity 0.2s;
+}
+
+.btn-edit {
+  background: #e5e7eb;
+  color: #111827;
+}
+.btn-delete {
+  background: #fee2e2;
+  color: var(--primary-red);
+}
+
+.card-footer button:active {
+  transform: scale(0.98);
+}
+.card-footer button:hover {
+  opacity: 0.8;
+}
+
+/* Status Change */
+.completed-state {
+  text-decoration: line-through;
+  color: #9ca3af !important;
+}
+
+@media (max-width: 400px) {
+  #todo-title {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .time-hint {
+    font-size: 12px;
+  }
+  .date-box {
+    font-size: 12px;
+  }
+  .complete-area {
+    font-size: 14px;
+  }
+  .middle-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .card-content {
+    padding: 20px;
+  }
+}
